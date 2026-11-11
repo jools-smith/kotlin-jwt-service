@@ -12,7 +12,6 @@ import org.springframework.scheduling.annotation.Scheduled
 import revenera.gcs.jwt.controllers.model.KeyStore
 import revenera.gcs.jwt.utils.ServiceDiagnostics
 
-
 @SpringBootApplication
 @EnableScheduling
 @ConfigurationPropertiesScan
