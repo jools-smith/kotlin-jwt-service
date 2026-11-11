@@ -1,0 +1,33 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+spring:
+  application:
+    name: jwt-management-service
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+  main:
+    banner-mode: "off"
+#
+server:
+  shutdown: graceful
+  port: 19090
+app:
+  configuration:
+    storagePath: 'C:\Working\kotlin\spring-rest-service\storage\key-store.json'
+logging:
+  level:
+    root: INFO
+    revenera.gcs: TRACE
+  pattern:
+    console: >
+      %clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){blue} 
+      %clr(%-5level){green} 
+      %clr([%thread]){cyan} 
+      %clr(%logger{48}.%M:%line){magenta}
+      - %msg%n
